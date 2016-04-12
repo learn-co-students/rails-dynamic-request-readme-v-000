@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'posts/:id' => 'posts#show'
+  resources :posts, only: :show
 end
