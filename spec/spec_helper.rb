@@ -29,6 +29,7 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+    config.include Capybara::DSL
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
@@ -89,4 +90,27 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+require 'rails_helper'
+
+describe 'navigate' do
+  before do
+    @post = Post.create(title: "My Post", description: "My post desc")
+  end
+
+  it 'shows the title on the show page in a h1 tag' do
+    visit "/posts/#{@post.id}"
+    expect(page).to have_css("h1", text: "My Post")
+  end
+
+  it 'to post pages' do
+    visit "/posts/#{@post.id}"
+    expect(page.status_code).to eq(200)
+  end
+  
+  it 'shows the description on the show page in a p tag' do
+    visit "/posts/#{@post.id}"
+    expect(page).to have_css("p", text: "My post desc")
+  end
+end
 end
