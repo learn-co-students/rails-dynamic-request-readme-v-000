@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get 'posts/:id', to: 'posts#show'
+
+  # We are removing this route:
+  # get 'posts/:id', to: 'posts#show'
+
+  # ..And replacing it with:
+  resources :posts, only: :show
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
