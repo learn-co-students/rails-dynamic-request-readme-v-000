@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route limited to a specific action:
-  #   resources :products
+  #   resources :products, only: :show
   resources :posts, only: :show
 
   # Example resource route with options:
