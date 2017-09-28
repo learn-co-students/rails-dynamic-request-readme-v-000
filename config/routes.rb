@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   # get 'posts/:id', to: 'posts#show'
+=======
+>>>>>>> 5abc87db52e34f36af2aec22d5a5c70ddcccba1d
   resources :posts, only: :show
 
   # The priority is based upon order of creation: first created -> highest priority.
