@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+resources :posts, only: :show
+# IT JUST AUTOMATICALLY KNOWS THAT THIS IS A POST/ID ROUTE, BUT IT WILL ALSO GO TO A REGULAR POST ROUTE 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
