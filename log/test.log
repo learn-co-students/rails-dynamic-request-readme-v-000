@@ -169,3 +169,323 @@ Started GET "/posts/1" for 127.0.0.1 at 2015-12-30 18:25:38 -0600
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
 Started GET "/posts/1" for 127.0.0.1 at 2015-12-30 18:25:38 -0600
   [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:25:17.799880"], ["updated_at", "2016-06-08 19:25:17.799880"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:25:17 -0700
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:25:17.809258"], ["updated_at", "2016-06-08 19:25:17.809258"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:25:17 -0700
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:25:17.812427"], ["updated_at", "2016-06-08 19:25:17.812427"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:25:17 -0700
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:01.534579"], ["updated_at", "2016-06-08 19:31:01.534579"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:01 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 18ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:01.579869"], ["updated_at", "2016-06-08 19:31:01.579869"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:01 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:01.583990"], ["updated_at", "2016-06-08 19:31:01.583990"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:01 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.8ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:26.697037"], ["updated_at", "2016-06-08 19:31:26.697037"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:26 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:26.737995"], ["updated_at", "2016-06-08 19:31:26.737995"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:26 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:31:26.742624"], ["updated_at", "2016-06-08 19:31:26.742624"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:31:26 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:32:05.970957"], ["updated_at", "2016-06-08 19:32:05.970957"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:32:05 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:32:06.012335"], ["updated_at", "2016-06-08 19:32:06.012335"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:32:06 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:32:06.016933"], ["updated_at", "2016-06-08 19:32:06.016933"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:32:06 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.8ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:37:25.926413"], ["updated_at", "2016-06-08 19:37:25.926413"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:37:25 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 872ms (Views: 857.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:37:26.852015"], ["updated_at", "2016-06-08 19:37:26.852015"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:37:26 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:37:26.862987"], ["updated_at", "2016-06-08 19:37:26.862987"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:37:26 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:38:22.017499"], ["updated_at", "2016-06-08 19:38:22.017499"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:38:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:38:22.060894"], ["updated_at", "2016-06-08 19:38:22.060894"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:38:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:38:22.067268"], ["updated_at", "2016-06-08 19:38:22.067268"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:38:22 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:39:17.365015"], ["updated_at", "2016-06-08 19:39:17.365015"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:39:17 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 199ms (Views: 186.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:39:17.581107"], ["updated_at", "2016-06-08 19:39:17.581107"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:39:17 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 19:39:17.588799"], ["updated_at", "2016-06-08 19:39:17.588799"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 12:39:17 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  DELETE FROM "posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'posts';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 20:07:52.556457"], ["updated_at", "2016-06-08 20:07:52.556457"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 13:07:52 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 202ms (Views: 184.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 20:07:52.781326"], ["updated_at", "2016-06-08 20:07:52.781326"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 13:07:52 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2016-06-08 20:07:52.789277"], ["updated_at", "2016-06-08 20:07:52.789277"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/1" for 127.0.0.1 at 2016-06-08 13:07:52 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
