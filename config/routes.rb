@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+#get 'posts/:id', to: 'posts#show'
+resources :posts, only: :show
+
+#resources :students, only: :index
+#Because you might want to use the same controller for a singular route (/account) and a plural route (/accounts/45), singular resources map to plural controllers. So that, for example, resource :photo and resources :photos creates both singular and plural routes that map to the same controller (PhotosController).
+# could also write this as the following
+        #resources :students, except: :show, :new, :create, :edit, :udpate, :destroy
+        #get '/students', to: 'students#index', as: 'students'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
