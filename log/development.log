@@ -312,3 +312,121 @@ Processing by SparrowsController#sparrow as HTML
   [1m[36mSparrow Load (0.1ms)[0m  [1mSELECT  "sparrows".* FROM "sparrows" WHERE "sparrows"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered sparrows/sparrow.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sparrows" ("name", "genus", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Maximus"], ["genus", "Cardinal"], ["created_at", "2018-02-14 22:59:00.672747"], ["updated_at", "2018-02-14 22:59:00.672747"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+
+
+Started GET "/sparrow/1" for 4.14.116.211 at 2018-02-14 23:02:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SparrowsController#sparrow as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT  "sparrows".* FROM "sparrows" WHERE "sparrows"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sparrows/sparrow.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 331ms (Views: 307.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:02:40 +0000
+Processing by SparrowsController#sparrows as HTML
+  Rendered sparrows/sparrows.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:03:24 +0000
+Processing by SparrowsController#sparrows as HTML
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:03:52 +0000
+Processing by SparrowsController#sparrows as HTML
+  Rendered sparrows/sparrows.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:06:25 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[36mSparrow Load (0.5ms)[0m  [1mSELECT "sparrows".* FROM "sparrows"[0m
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:07:17 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:07:26 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[36mSparrow Load (0.3ms)[0m  [1mSELECT "sparrows".* FROM "sparrows"[0m
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:07:36 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:07:54 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[36mSparrow Load (0.2ms)[0m  [1mSELECT "sparrows".* FROM "sparrows"[0m
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>This is all of the Sparrows Explicitly Rendered</h1>
+    2: <ol>
+    3: <% @sparrows.each do |tzippor| %>
+    4:   <li><%= tzippor.name tzippor.genus %></li>
+    5: <% end %>
+    6: </ol>
+  app/views/explicitlyrendered/sparrows.html.erb:4:in `block in _app_views_explicitlyrendered_sparrows_html_erb___4147908397639193238_70161045474140'
+  app/views/explicitlyrendered/sparrows.html.erb:3:in `_app_views_explicitlyrendered_sparrows_html_erb___4147908397639193238_70161045474140'
+  app/controllers/sparrows_controller.rb:13:in `sparrows'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:08:17 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:08:53 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[36mSparrow Load (0.2ms)[0m  [1mSELECT "sparrows".* FROM "sparrows"[0m
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:09:32 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:10:18 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[36mSparrow Load (0.2ms)[0m  [1mSELECT "sparrows".* FROM "sparrows"[0m
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sparrows" for 4.14.116.211 at 2018-02-14 23:10:40 +0000
+Processing by SparrowsController#sparrows as HTML
+  [1m[35mSparrow Load (0.2ms)[0m  SELECT "sparrows".* FROM "sparrows"
+  Rendered explicitlyrendered/sparrows.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)

@@ -9,6 +9,8 @@ class SparrowsController < ApplicationController
   end
 
   def sparrows
-    render :plain => "This will show all of the sparrows in the inventory"
+    @sparrows = Sparrow.all
+    render 'explicitlyrendered/sparrows'
+    #render :plain => "This will show all of the sparrows in the inventory"
   end
 end
