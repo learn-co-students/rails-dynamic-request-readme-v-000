@@ -54,4 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   get 'posts/:id', to: 'posts#show'
+  get '/start' , to: 'sparrows#startaction'
+  get '/sparrow/:id' , to: 'sparrows#sparrow'
+  get '/sparrows', to: 'sparrows#sparrows'
 end
