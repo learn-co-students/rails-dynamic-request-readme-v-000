@@ -1,0 +1,10 @@
+class CreateSparrows < ActiveRecord::Migration
+  def change
+    create_table :sparrows do |t|
+      t.string :name
+      t.string :genus
+
+      t.timestamps null: false
+    end
+  end
+end
