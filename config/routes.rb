@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'posts/:id', to: 'posts#show'
+  # get 'posts/:id', to: 'posts#show'  #This is the long way of writing routes, but we can use 'resources' instead...
+
+  resources :posts, only: :show  #typing 'only' followed by a restful route allows us to choose that particular route.
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
