@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+  #*************get 'posts/:id', to: 'posts#show'*****************
+  resources :posts, only: :show 
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
