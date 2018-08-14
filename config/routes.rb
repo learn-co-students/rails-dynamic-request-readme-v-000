@@ -54,5 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get 'posts/:id' => 'posts#show'
+  resources :posts, only: :show
 end
