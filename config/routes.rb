@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/:id', to: 'posts#show'
+  # get 'posts/:id', to: 'posts#show' can be replaced by
+  resources :posts, only: :show
+  # the only selects which of the seven RESTful routs we care about
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
