@@ -38,8 +38,7 @@ In review, what's the difference between static and dynamic routes?
 - Static routes render pages that have a hard coded path connected to them. For
   example, the `/welcome` path will always show the `welcome` page.
 
-- Dynamic routes will render different data based on the parameters passed to the
-  route. For example, when `42` is passed in as the parameter to the `/posts/:id`
+- Dynamic routes will render different data based on the parameters passed to the route. For example, when `42` is passed in as the parameter to the `/posts/:id`
   route, the app should render the data for the `post` with an ID of `42`. When
   `222` is passed in, the app should render the data for the `post` with an ID of
   `222`.
