@@ -10,6 +10,8 @@ describe 'navigate' do
     expect(page.status_code).to eq(200)
   end
 
+  #Running rspec gives us an expected error of: ActionController::RoutingError: No route matches [GET] "/posts/1"
+
   it 'shows the title on the show page in an h1 tag' do
     visit "/posts/#{@post.id}"
     expect(page).to have_css("h1", text: "My Post")
